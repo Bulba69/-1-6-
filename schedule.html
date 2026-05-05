@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расписание</title>
+  <link rel="stylesheet" href="style/layout.css">
+  <link rel="stylesheet" href="style/schedule.css">
+  <link rel="stylesheet" href="style/phone.css">
+  <link rel="stylesheet" href="style/bigphone.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon">
+      <img src="logo.svg" alt="logo">
+    </div>
+    <div>
+      <div class="title">Минск-Пассажирский</div>
+      <div class="subtitle">Центральный вокзал</div>
+    </div>
+  </div>
+
+  <div class="search">
+    <input type="text" placeholder="Поиск: город или номер поезда...">
+    <button>Найти</button>
+  </div>
+
+  <nav class="nav">
+    <a href="Main.html">Главная</a>
+    <a href="schedule.html" class="active">Расписание</a>
+    <a href="about.html">О нас</a>
+  </nav>
+</header>
+
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Расписание поездов</h1>
+    <p>Актуальная информация обо всех рейсах</p>
+  </div>
+</section>
+
+
+<section class="filters">
+  <h2>Фильтры</h2>
+  <small>Поиск по направлению или номеру</small>
+
+  <input id="searchInput" placeholder="Например: Брест, Гомель, 701А">
+
+  <div class="filter-grid">
+
+    <div class="filter-group">
+      <h3>Тип поезда</h3>
+      <div class="train-types">
+        <button class="filter-btn active" data-type="all">Все</button>
+        <button class="filter-btn purple" data-type="regional">Межрегиональный</button>
+        <button class="filter-btn green"  data-type="econom">Эконом</button>
+        <button class="filter-btn orange" data-type="business">Бизнес-класс</button>
+      </div>
+      <div id="result-count">Найдено рейсов: 8</div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Время отправления</h3>
+      <div class="time-types">
+        <button class="time-btn active" data-time="all">Все время</button>
+        <button class="time-btn" data-time="morning">Утро</button>
+        <button class="time-btn" data-time="day">День</button>
+        <button class="time-btn" data-time="evening">Вечер</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="trains">
+  <h2 class="trains-title">🕒 Табло рейсов</h2>
+
+  <div class="trains-grid">
+
+    <div class="train-card"
+         data-from="Минск" data-to="Брест"
+         data-number="601Б" data-type="regional" data-time="morning">
+      <div class="card-top">
+        <h3>Поезд №601Б</h3>
+        <span class="status ok">✔ Вовремя</span>
+      </div>
+      <span class="badge purple">Межрегиональный</span>
+      <div class="route">
+        <div class="point">
+          <span class="label">Отправление</span>
+          <p>Минск</p>
+          <span class="time">08:00</span>
+        </div>
+        <div class="route-line">— ⏱ —</div>
+        <div class="point right">
+          <span class="label">Прибытие</span>
+          <p>Брест</p>
+          <span class="time">11:45</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <span>Платформа: 3</span>
+        <span>В пути: <b>3ч 45мин</b></span>
+      </div>
+    </div>
+
+    <div class="train-card"
+         data-from="Минск" data-to="Витебск"
+         data-number="803Г" data-type="econom" data-time="morning">
+      <div class="card-top">
+        <h3>Поезд №803Г</h3>
+        <span class="status delay">⚠ Задерживается +25 мин</span>
+      </div>
+      <span class="badge green">Эконом</span>
+      <div class="route">
+        <div class="point">
+          <span class="label">Отправление</span>
+          <p>Минск</p>
+          <span class="time">10:30</span>
+        </div>
+        <div class="route-line">— ⏱ —</div>
+        <div class="point right">
+          <span class="label">Прибытие</span>
+          <p>Витебск</p>
+          <span class="time">13:45</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <span>Платформа: 7</span>
+        <span>В пути: <b>3ч 15мин</b></span>
+      </div>
+    </div>
+
+    <div class="train-card"
+         data-from="Минск" data-to="Гомель"
+         data-number="702М" data-type="business" data-time="day">
+      <div class="card-top">
+        <h3>Поезд №702М</h3>
+        <span class="status ok">✔ Вовремя</span>
+      </div>
+      <span class="badge orange">Бизнес-класс</span>
+      <div class="route">
+        <div class="point">
+          <span class="label">Отправление</span>
+          <p>Минск</p>
+          <span class="time">09:15</span>
+        </div>
+        <div class="route-line">— ⏱ —</div>
+        <div class="point right">
+          <span class="label">Прибытие</span>
+          <p>Гомель</p>
+          <span class="time">13:30</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <span>Платформа: 1</span>
+        <span>В пути: <b>4ч 15мин</b></span>
+      </div>
+    </div>
+
+    <div class="train-card"
+         data-from="Минск" data-to="Гродно"
+         data-number="904В" data-type="regional" data-time="day">
+      <div class="card-top">
+        <h3>Поезд №904В</h3>
+        <span class="status ok">✔ Вовремя</span>
+      </div>
+      <span class="badge purple">Межрегиональный</span>
+      <div class="route">
+        <div class="point">
+          <span class="label">Отправление</span>
+          <p>Минск</p>
+          <span class="time">12:00</span>
+        </div>
+        <div class="route-line">— ⏱ —</div>
+        <div class="point right">
+          <span class="label">Прибытие</span>
+          <p>Гродно</p>
+          <span class="time">15:20</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <span>Платформа: 2</span>
+        <span>В пути: <b>3ч 20мин</b></span>
+      </div>
+    </div>
+
+    <div class="train-card"
+         data-from="Минск" data-to="Могилёв"
+         data-number="205П" data-type="econom" data-time="evening">
+      <div class="card-top">
+        <h3>Поезд №205П</h3>
+        <span class="status ok">✔ Вовремя</span>
+      </div>
+      <span class="badge green">Эконом</span>
+      <div class="route">
+        <div class="point">
+          <span class="label">Отправление</span>
+          <p>Минск</p>
+          <span class="time">13:45</span>
+        </div>
+        <div class="route-line">— ⏱ —</div>
+        <div class="point right">
+          <span class="label">Прибытие</span>
+          <p>Могилёв</p>
+          <span class="time">16:00</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <span>Платформа: 4</span>
+        <span>В пути: <b>2ч 15мин</b></span>
+      </div>
+    </div>
+
+    <div class="train-card"
+         data-from="Гомель" data-to="Минск"
+         data-number="306Л" data-type="business" data-time="evening">
+      <div class="card-top">
+        <h3>Поезд №306Л</h3>
+        <span class="status ok">✔ Вовремя</span>
+      </div>
+      <span class="badge orange">Бизнес-класс</span>
+      <div class="route">
+        <div class="point">
+          <span class="label">Отправление</span>
+          <p>Гомель</p>
+          <span class="time">14:20</span>
+        </div>
+        <div class="route-line">— ⏱ —</div>
+        <div class="point right">
+          <span class="label">Прибытие</span>
+          <p>Минск</p>
+          <span class="time">18:30</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <span>Платформа: 5</span>
+        <span>В пути: <b>4ч 10мин</b></span>
+      </div>
+    </div>
+
+    <div class="train-card"
+         data-from="Витебск" data-to="Минск"
+         data-number="407О" data-type="regional" data-time="evening">
+      <div class="card-top">
+        <h3>Поезд №407О</h3>
+        <span class="status delay">⚠ Задерживается +10 мин</span>
+      </div>
+      <span class="badge purple">Межрегиональный</span>
+      <div class="route">
+        <div class="point">
+          <span class="label">Отправление</span>
+          <p>Витебск</p>
+          <span class="time">15:50</span>
+        </div>
+        <div class="route-line">— ⏱ —</div>
+        <div class="point right">
+          <span class="label">Прибытие</span>
+          <p>Минск</p>
+          <span class="time">18:20</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <span>Платформа: 6</span>
+        <span>В пути: <b>2ч 30мин</b></span>
+      </div>
+    </div>
+
+    <div class="train-card"
+         data-from="Минск" data-to="Брест"
+         data-number="508Ж" data-type="econom" data-time="evening">
+      <div class="card-top">
+        <h3>Поезд №508Ж</h3>
+        <span class="status ok">✔ Вовремя</span>
+      </div>
+      <span class="badge green">Эконом</span>
+      <div class="route">
+        <div class="point">
+          <span class="label">Отправление</span>
+          <p>Минск</p>
+          <span class="time">16:30</span>
+        </div>
+        <div class="route-line">— ⏱ —</div>
+        <div class="point right">
+          <span class="label">Прибытие</span>
+          <p>Брест</p>
+          <span class="time">20:40</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <span>Платформа: 8</span>
+        <span>В пути: <b>4ч 10мин</b></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="rules">
+  <h2>Правила перевозок</h2>
+
+  <div class="rule-block">
+    <h3>Документы для посадки</h3>
+    <ul>
+      <li>Паспорт гражданина или документ, удостоверяющий личность</li>
+      <li>Проездной билет (распечатанный или электронный)</li>
+      <li>Для детей до 14 лет — свидетельство о рождении</li>
+    </ul>
+  </div>
+
+  <div class="rule-block">
+    <h3>Багаж и ручная кладь</h3>
+    <ul>
+      <li>Бесплатно перевозится до 36 кг багажа</li>
+      <li>Ручная кладь: не более 180 см</li>
+      <li>Сверхнорматив — от 200 руб/кг</li>
+    </ul>
+  </div>
+
+  <div class="rule-block">
+    <h3>Посадка на поезд</h3>
+    <ul>
+      <li>Начинается за 40 минут</li>
+      <li>Заканчивается за 10 минут</li>
+      <li>Рекомендуем приходить заранее</li>
+    </ul>
+  </div>
+
+  <div class="rule-block">
+    <h3>Возврат и обмен билетов</h3>
+    <ul>
+      <li>Возврат более чем за 8 часов — возврат полной стоимости за вычетом сбора</li>
+      <li>Возврат от 2 до 8 часов — возврат 50% стоимости</li>
+      <li>Менее 2 часов до отправления — возврат не осуществляется</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="station-footer">
+  <div class="footer-container">
+
+    <div class="footer-block">
+      <h3>Контактная информация</h3>
+      <p>Справочная служба: 8-017-225-40-00</p>
+      <p>Администрация: +375 (17) 227-36-95</p>
+      <p>Email: info@railway.by</p>
+    </div>
+
+    <div class="footer-block">
+      <h3>Услуги вокзала</h3>
+      <p>Кассы: с 06:00 до 23:00</p>
+      <p>Залы ожидания: круглосуточно</p>
+      <p>Камеры хранения: с 07:00 до 22:00</p>
+      <p>Медпункт: круглосуточно</p>
+    </div>
+
+    <div class="footer-block">
+      <h3>Адрес вокзала</h3>
+      <p>г. Минск, пл. Привокзальная, 3</p>
+      <p>Метро: Площадь Ленина</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Железнодорожный вокзал. Все права защищены.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="search.js"></script>
+
+</body>
+</html>

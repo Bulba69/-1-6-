@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trains>
+ 
+  <train>
+    <number>601Б</number>
+    <type>Межрегиональный</type>
+    <from>Минск</from>
+    <to>Брест</to>
+    <departureTime>08:00</departureTime>
+    <arrivalTime>11:45</arrivalTime>
+    <platform>3</platform>
+    <duration>3ч 45мин</duration>
+    <status>ok</status>
+    <typeClass>regional</typeClass>
+    <timeSlot>morning</timeSlot>
+ 
+    <wagons>
+      <wagon>Плацкарт</wagon>
+      <wagon>Купе</wagon>
+      <wagon>СВ</wagon>
+    </wagons>
+ 
+    <services>
+      <service>Кондиционер</service>
+      <service>Розетки</service>
+      <service>Wi-Fi</service>
+    </services>
+ 
+    <stations>
+      <station start="true">
+        <name>Минск</name>
+        <departure>08:00</departure>
+        <platform>3</platform>
+      </station>
+      <station>
+        <name>Барановичи</name>
+        <arrival>09:40</arrival>
+        <departure>09:45</departure>
+        <stop>5 мин</stop>
+        <platform>2</platform>
+      </station>
+      <station end="true">
+        <name>Брест</name>
+        <arrival>11:45</arrival>
+        <platform>5</platform>
+      </station>
+    </stations>
+  </train>
+ 
+  <train>
+    <number>803Г</number>
+    <type>Эконом</type>
+    <from>Минск</from>
+    <to>Витебск</to>
+    <departureTime>10:30</departureTime>
+    <arrivalTime>13:45</arrivalTime>
+    <platform>7</platform>
+    <duration>3ч 15мин</duration>
+    <status>delay</status>
+    <typeClass>econom</typeClass>
+    <timeSlot>morning</timeSlot>
+ 
+    <wagons>
+      <wagon>Плацкарт</wagon>
+    </wagons>
+ 
+    <services>
+      <service>Wi-Fi</service>
+      <service>Ресторан</service>
+    </services>
+ 
+    <stations>
+      <station start="true">
+        <name>Минск</name>
+        <departure>10:30</departure>
+        <platform>7</platform>
+      </station>
+      <station>
+        <name>Орша</name>
+        <arrival>12:50</arrival>
+        <departure>12:55</departure>
+        <stop>5 мин</stop>
+        <platform>1</platform>
+      </station>
+      <station end="true">
+        <name>Витебск</name>
+        <arrival>13:45</arrival>
+        <platform>3</platform>
+      </station>
+    </stations>
+  </train>
+ 
+  <train>
+    <number>702М</number>
+    <type>Бизнес-класс</type>
+    <from>Минск</from>
+    <to>Гомель</to>
+    <departureTime>09:15</departureTime>
+    <arrivalTime>13:30</arrivalTime>
+    <platform>1</platform>
+    <duration>4ч 15мин</duration>
+    <status>ok</status>
+    <typeClass>business</typeClass>
+    <timeSlot>day</timeSlot>
+ 
+    <wagons>
+      <wagon>Бизнес-класс</wagon>
+      <wagon>Купе</wagon>
+    </wagons>
+ 
+    <services>
+      <service>Питание включено</service>
+      <service>Wi-Fi</service>
+      <service>Розетки</service>
+      <service>Кондиционер</service>
+    </services>
+ 
+    <stations>
+      <station start="true">
+        <name>Минск</name>
+        <departure>09:15</departure>
+        <platform>1</platform>
+      </station>
+      <station>
+        <name>Жлобин</name>
+        <arrival>11:50</arrival>
+        <departure>11:55</departure>
+        <stop>5 мин</stop>
+        <platform>2</platform>
+      </station>
+      <station end="true">
+        <name>Гомель</name>
+        <arrival>13:30</arrival>
+        <platform>4</platform>
+      </station>
+    </stations>
+  </train>
+ 
+  <train>
+    <number>904В</number>
+    <type>Межрегиональный</type>
+    <from>Минск</from>
+    <to>Гродно</to>
+    <departureTime>12:00</departureTime>
+    <arrivalTime>15:20</arrivalTime>
+    <platform>2</platform>
+    <duration>3ч 20мин</duration>
+    <status>ok</status>
+    <typeClass>regional</typeClass>
+    <timeSlot>day</timeSlot>
+ 
+    <wagons>
+      <wagon>Плацкарт</wagon>
+      <wagon>Купе</wagon>
+    </wagons>
+ 
+    <services>
+      <service>Wi-Fi</service>
+      <service>Розетки</service>
+    </services>
+ 
+    <stations>
+      <station start="true">
+        <name>Минск</name>
+        <departure>12:00</departure>
+        <platform>2</platform>
+      </station>
+      <station>
+        <name>Молодечно</name>
+        <arrival>13:10</arrival>
+        <departure>13:15</departure>
+        <stop>5 мин</stop>
+        <platform>1</platform>
+      </station>
+      <station>
+        <name>Лида</name>
+        <arrival>14:20</arrival>
+        <departure>14:25</departure>
+        <stop>5 мин</stop>
+        <platform>2</platform>
+      </station>
+      <station end="true">
+        <name>Гродно</name>
+        <arrival>15:20</arrival>
+        <platform>3</platform>
+      </station>
+    </stations>
+  </train>
+ 
+  <train>
+    <number>205П</number>
+    <type>Эконом</type>
+    <from>Минск</from>
+    <to>Могилёв</to>
+    <departureTime>13:45</departureTime>
+    <arrivalTime>16:00</arrivalTime>
+    <platform>4</platform>
+    <duration>2ч 15мин</duration>
+    <status>ok</status>
+    <typeClass>econom</typeClass>
+    <timeSlot>evening</timeSlot>
+ 
+    <wagons>
+      <wagon>Плацкарт</wagon>
+    </wagons>
+ 
+    <services>
+      <service>Wi-Fi</service>
+    </services>
+ 
+    <stations>
+      <station start="true">
+        <name>Минск</name>
+        <departure>13:45</departure>
+        <platform>4</platform>
+      </station>
+      <station>
+        <name>Осиповичи</name>
+        <arrival>15:00</arrival>
+        <departure>15:05</departure>
+        <stop>5 мин</stop>
+        <platform>1</platform>
+      </station>
+      <station end="true">
+        <name>Могилёв</name>
+        <arrival>16:00</arrival>
+        <platform>2</platform>
+      </station>
+    </stations>
+  </train>
+ 
+  <train>
+    <number>306Л</number>
+    <type>Бизнес-класс</type>
+    <from>Гомель</from>
+    <to>Минск</to>
+    <departureTime>14:20</departureTime>
+    <arrivalTime>18:30</arrivalTime>
+    <platform>5</platform>
+    <duration>4ч 10мин</duration>
+    <status>ok</status>
+    <typeClass>business</typeClass>
+    <timeSlot>evening</timeSlot>
+ 
+    <wagons>
+      <wagon>Бизнес-класс</wagon>
+      <wagon>Купе</wagon>
+    </wagons>
+ 
+    <services>
+      <service>Питание включено</service>
+      <service>Wi-Fi</service>
+      <service>Кондиционер</service>
+    </services>
+ 
+    <stations>
+      <station start="true">
+        <name>Гомель</name>
+        <departure>14:20</departure>
+        <platform>5</platform>
+      </station>
+      <station>
+        <name>Жлобин</name>
+        <arrival>16:00</arrival>
+        <departure>16:05</departure>
+        <stop>5 мин</stop>
+        <platform>3</platform>
+      </station>
+      <station end="true">
+        <name>Минск</name>
+        <arrival>18:30</arrival>
+        <platform>1</platform>
+      </station>
+    </stations>
+  </train>
+ 
+  <train>
+    <number>407О</number>
+    <type>Межрегиональный</type>
+    <from>Витебск</from>
+    <to>Минск</to>
+    <departureTime>15:50</departureTime>
+    <arrivalTime>18:20</arrivalTime>
+    <platform>6</platform>
+    <duration>2ч 30мин</duration>
+    <status>delay</status>
+    <typeClass>regional</typeClass>
+    <timeSlot>evening</timeSlot>
+ 
+    <wagons>
+      <wagon>Плацкарт</wagon>
+      <wagon>Купе</wagon>
+    </wagons>
+ 
+    <services>
+      <service>Wi-Fi</service>
+      <service>Розетки</service>
+    </services>
+ 
+    <stations>
+      <station start="true">
+        <name>Витебск</name>
+        <departure>15:50</departure>
+        <platform>6</platform>
+      </station>
+      <station>
+        <name>Орша</name>
+        <arrival>16:50</arrival>
+        <departure>16:55</departure>
+        <stop>5 мин</stop>
+        <platform>2</platform>
+      </station>
+      <station end="true">
+        <name>Минск</name>
+        <arrival>18:20</arrival>
+        <platform>4</platform>
+      </station>
+    </stations>
+  </train>
+ 
+  <train>
+    <number>508Ж</number>
+    <type>Эконом</type>
+    <from>Минск</from>
+    <to>Брест</to>
+    <departureTime>16:30</departureTime>
+    <arrivalTime>20:40</arrivalTime>
+    <platform>8</platform>
+    <duration>4ч 10мин</duration>
+    <status>ok</status>
+    <typeClass>econom</typeClass>
+    <timeSlot>evening</timeSlot>
+ 
+    <wagons>
+      <wagon>Плацкарт</wagon>
+    </wagons>
+ 
+    <services>
+      <service>Wi-Fi</service>
+    </services>
+ 
+    <stations>
+      <station start="true">
+        <name>Минск</name>
+        <departure>16:30</departure>
+        <platform>8</platform>
+      </station>
+      <station>
+        <name>Барановичи</name>
+        <arrival>18:15</arrival>
+        <departure>18:20</departure>
+        <stop>5 мин</stop>
+        <platform>1</platform>
+      </station>
+      <station end="true">
+        <name>Брест</name>
+        <arrival>20:40</arrival>
+        <platform>2</platform>
+      </station>
+    </stations>
+  </train>
+ 
+</trains>
+ 

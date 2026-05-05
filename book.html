@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бронирование билета</title>
+  <link rel="stylesheet" href="style/_layout.scss">
+  <link rel="stylesheet" href="style/book.css">
+</head>
+<body>
+  
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon">
+      <img src="logo.svg" alt="logo">
+    </div>
+    <div>
+      <div class="title">Минск-Пассажирский</div>
+      <div class="subtitle">Центральный вокзал</div>
+    </div>
+  </div>
+  <div class="search">
+    <input type="text" placeholder="Поиск: город или номер поезда...">
+    <button>Найти</button>
+  </div>
+  <nav class="nav">
+    <a href="Main.html">Главная</a>
+    <a href="schedule.html">Расписание</a>
+    <a href="about.html">О нас</a>
+  </nav>
+</header>
+
+<div class="booking-header">
+  <a href="javascript:history.back()" class="back-link">← Вернуться к рейсу</a>
+  <div class="booking-title">Бронирование билета</div>
+  <div class="booking-subtitle" id="bookingSubtitle">Загрузка...</div>
+
+  <!-- СТЕППЕР -->
+  <div class="stepper">
+    <div class="step active" id="stepEl1">
+      <div class="step-circle">1</div>
+      <div class="step-label">Выбор места</div>
+    </div>
+    <div class="step-line" id="line1"></div>
+    <div class="step" id="stepEl2">
+      <div class="step-circle">2</div>
+      <div class="step-label">Пассажиры</div>
+    </div>
+    <div class="step-line" id="line2"></div>
+    <div class="step" id="stepEl3">
+      <div class="step-circle">3</div>
+      <div class="step-label">Оплата</div>
+    </div>
+  </div>
+</div>
+
+<div class="booking-layout">
+
+  <!-- ЛЕВАЯ ЧАСТЬ -->
+  <div>
+
+    <!-- ШАГ 1: Выбор вагона -->
+    <div class="step-card step-content active" id="step1">
+      <h2><span class="icon">🚃</span> Выберите тип вагона</h2>
+      <div class="wagon-list" id="wagonContainer">
+        <div class="loading-text">Загрузка данных...</div>
+      </div>
+      <button class="btn-next" id="btn1" disabled>Далее</button>
+    </div>
+
+    <!-- ШАГ 2: Пассажиры -->
+    <div class="step-card step-content" id="step2">
+      <h2><span class="icon">👥</span> Данные пассажиров</h2>
+
+      <div class="passenger-select-wrap">
+        <label>Количество пассажиров</label>
+        <select class="passenger-select" id="passengerSelect" onchange="onPassengerCountChange(this.value)">
+          <option value="1">1 пассажир</option>
+          <option value="2">2 пассажира</option>
+          <option value="3">3 пассажира</option>
+          <option value="4">4 пассажира</option>
+          <option value="5">5 пассажиров</option>
+          <option value="6">6 пассажиров</option>
+        </select>
+      </div>
+
+      <div class="passenger-form" id="passengerForm"></div>
+
+      <div class="btn-row">
+        <button class="btn-back" onclick="goBack(1)">Назад</button>
+        <button class="btn-next" onclick="goStep(3)">Далее</button>
+      </div>
+    </div>
+
+    <!-- ШАГ 3: Оплата -->
+    <div class="step-card step-content" id="step3">
+      <h2><span class="icon">💳</span> Оплата</h2>
+
+      <div class="form-group" style="margin-bottom:16px;">
+        <label>Номер карты</label>
+        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)">
+      </div>
+      <div class="card-row">
+        <div class="form-group">
+          <label>Срок действия</label>
+          <input type="text" id="cardExpiry" placeholder="ММ/ГГ" maxlength="5" oninput="formatExpiry(this)">
+        </div>
+        <div class="form-group">
+          <label>CVV</label>
+          <input type="password" id="cardCvv" placeholder="123" maxlength="3">
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom:16px; margin-top:12px;">
+        <label>Имя владельца карты</label>
+        <input type="text" id="cardName" placeholder="IVAN IVANOV" style="text-transform:uppercase;">
+      </div>
+
+      <div class="security-note">
+        🔒 Ваши платежные данные защищены и передаются по защищённому соединению
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-back" onclick="goBack(2)">Назад</button>
+        <button class="btn-next" id="payBtn" onclick="confirmPayment()">Оплатить <span id="payBtnPrice"></span></button>
+      </div>
+    </div>
+
+    <!-- УСПЕХ -->
+    <div class="step-card success-screen" id="successScreen">
+      <div class="success-check">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h2>Бронирование успешно!</h2>
+      <p class="booking-code-label">Ваш билет забронирован. Номер бронирования: <span class="booking-code" id="bookingCode"></span></p>
+
+      <div class="booking-details-box">
+        <h3>Детали бронирования</h3>
+        <div class="detail-row"><span>Поезд:</span><span id="sucTrain"></span></div>
+        <div class="detail-row"><span>Маршрут:</span><span id="sucRoute"></span></div>
+        <div class="detail-row"><span>Дата отправления:</span><span id="sucDate"></span></div>
+        <div class="detail-row"><span>Тип вагона:</span><span id="sucWagon"></span></div>
+        <div class="detail-row"><span>Пассажиров:</span><span id="sucPassengers"></span></div>
+        <div class="detail-row total-row"><span>Итого:</span><span id="sucTotal"></span></div>
+      </div>
+
+      <p class="email-note">Подтверждение бронирования отправлено на вашу электронную почту</p>
+
+      <div class="success-btns">
+        <a href="javascript:history.back()" class="btn-outline">Вернуться к рейсу</a>
+        <a href="Main.html" class="btn-primary">На главную</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ПРАВАЯ ЧАСТЬ: детали заказа -->
+  <div>
+    <div class="order-card">
+      <h3>Детали заказа</h3>
+
+      <div class="order-row">
+        <span class="o-icon">📅</span>
+        <div>
+          <div class="o-label">Дата</div>
+          <div class="o-value" id="orderDate">—</div>
+        </div>
+      </div>
+
+      <div class="order-row">
+        <span class="o-icon">📍</span>
+        <div>
+          <div class="o-label">Маршрут</div>
+          <div class="o-value" id="orderRoute">—</div>
+        </div>
+      </div>
+
+      <div class="order-row">
+        <span class="o-icon">🕐</span>
+        <div>
+          <div class="o-label">Время</div>
+          <div class="o-value" id="orderTime">—</div>
+          <div class="order-duration" id="orderDuration"></div>
+        </div>
+      </div>
+
+      <div class="order-row">
+        <span class="o-icon">👥</span>
+        <div>
+          <div class="o-label">Пассажиров</div>
+          <div class="o-value" id="orderPassengers">1</div>
+        </div>
+      </div>
+
+      <div class="ticket-items" id="ticketItems"></div>
+
+      <div class="order-total">
+        <span class="t-label">Итого:</span>
+        <span class="t-price" id="orderTotal">0 BYN</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="station-footer">
+  <div class="footer-container">
+    <div class="footer-block">
+      <h3>Контактная информация</h3>
+      <p>Справочная служба: 8-017-225-40-00</p>
+      <p>Администрация: +375 (17) 227-36-95</p>
+      <p>Email: info@railway.by</p>
+    </div>
+    <div class="footer-block">
+      <h3>Услуги вокзала</h3>
+      <p>Кассы: с 06:00 до 23:00</p>
+      <p>Залы ожидания: круглосуточно</p>
+      <p>Камеры хранения: с 07:00 до 22:00</p>
+      <p>Медпункт: круглосуточно</p>
+    </div>
+    <div class="footer-block">
+      <h3>Адрес вокзала</h3>
+      <p>г. Минск, пл. Привокзальная, 3</p>
+      <p>Метро: Площадь Ленина</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Железнодорожный вокзал. Все права защищены.
+  </div>
+</footer>
+<script src="book.js"></script>
+<script src="search.js"></script>
+
+</body>
+</html>

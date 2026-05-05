@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  padding: 100px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 500px;
+
+  background: url("Vokzal.jpg") center/cover no-repeat;
+}
+
+/* затемнение */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+/* текст */
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.nav a {
+  font-weight: 500;
+}
+
+/* кнопка */
+.btn {
+  background: #2563eb;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+/* Контейнер */
+.container {
+  padding: 100px 40px 40px;
+}
+
+.about {
+  padding: 60px 40px;
+  background: #f1f5f9;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+}
+
+/* Левая часть */
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #334155;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Правая часть */
+.about-stats {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Карточки */
+.stat-card {
+  background: #e2e8f0;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.stat-card p {
+  color: #475569;
+}
+
+
+.services {
+  padding: 60px 40px;
+  background: #f1f5f9;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* Сетка */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Карточка */
+.service-card {
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 30px;
+  text-align: left;
+
+  border: 1px solid #e2e8f0;
+
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Иконка */
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #dbeafe;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* Заголовок */
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Время */
+.time {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Описание */
+.desc {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ===== КОНТАКТЫ ===== */
+.contacts {
+  padding: 60px 40px;
+  background: #f1f5f9;
+  text-align: center;
+}
+
+.contacts h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.contact-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: left;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 28px;
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  margin-bottom: 5px;
+}
+
+.contact-card span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+

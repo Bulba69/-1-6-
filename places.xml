@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<trains>
+  <train id="001">
+    <name>Минск - Брест</name>
+
+    <wagon>
+      <type>Купе</type>
+      <desc>Купейный вагон, 4 места</desc>
+      <price>45</price>
+    </wagon>
+
+    <wagon>
+      <type>СВ</type>
+      <desc>Спальный вагон, 2 места</desc>
+      <price>65</price>
+    </wagon>
+
+    <wagon>
+      <type>Плацкарт</type>
+      <desc>Открытые полки</desc>
+      <price>25</price>
+    </wagon>
+  </train>
+
+  <train id="002">
+    <name>Минск - Гродно</name>
+
+    <wagon>
+      <type>Купе</type>
+      <price>40</price>
+    </wagon>
+
+    <wagon>
+      <type>Плацкарт</type>
+      <price>20</price>
+    </wagon>
+  </train>
+</trains>

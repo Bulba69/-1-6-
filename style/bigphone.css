@@ -1,0 +1,19 @@
+@media (max-width: 1024px) {
+
+  .header {
+    padding: 15px 20px;
+  }
+
+  .search input {
+    width: 180px;
+  }
+
+  .trains-grid {
+    grid-template-columns: 1fr 1fr; /* 2 колонки */
+  }
+
+  .filters {
+    margin: 20px;
+  }
+
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/layout.css">
+  <link rel="stylesheet" href="style/schedule.css">
+  <link rel="stylesheet" href="style/ticket.css">
+  <title>Поезд</title>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon">
+      <img src="logo.svg" alt="logo">
+    </div>
+    <div>
+      <div class="title">Минск-Пассажирский</div>
+      <div class="subtitle">Центральный вокзал</div>
+    </div>
+  </div>
+
+  <div class="search">
+    <input type="text" placeholder="Поиск: город или номер поезда...">
+    <button>Найти</button>
+  </div>
+
+  <nav class="nav">
+    <a href="Main.html">Главная</a>
+    <a href="schedule.html">Расписание</a>
+    <a href="about.html">О нас</a>
+  </nav>
+</header>
+
+<a href="schedule.html" class="back">← Вернуться к расписанию</a>
+
+<section class="train-info" style="margin: 20px;">
+
+  <div class="top">
+    <div>
+      <h1 id="trainNumber"></h1>
+      <span class="badge" id="trainType"></span>
+    </div>
+
+    <div class="status-block">
+      <span class="status" id="trainStatus"></span>
+      <span id="platform">Платформа: </span>
+    </div>
+  </div>
+
+  <div class="route-main">
+    <div>
+      <p>Отправление</p>
+      <h2 id="fromCity"></h2>
+      <span class="time" id="departureTime"></span>
+    </div>
+
+    <div class="center" id="duration"></div>
+
+    <div>
+      <p>Прибытие</p>
+      <h2 id="toCity"></h2>
+      <span class="time" id="arrivalTime"></span>
+    </div>
+  </div>
+
+</section>
+
+<section class="content">
+
+  <div class="route-list">
+    <h2>Маршрут следования</h2>
+    <div id="routeContainer"></div>
+  </div>
+
+  <div class="side">
+
+    <div class="card" id="wagonBlock" style="background:white; border-radius:16px; padding:20px; margin-bottom:15px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+      <h3>Типы вагонов</h3>
+    </div>
+
+    <div class="card" id="serviceBlock" style="background:white; border-radius:16px; padding:20px; margin-bottom:15px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+      <h3>Услуги</h3>
+    </div>
+
+    <div class="buy-card">
+  <h2>Купить билет</h2>
+
+  <a href="#" class="buy-btn" id="buyLink">Перейти к покупке</a>
+
+  <p class="buy-note">
+    Онлайн-покупка билетов доступна за 90 дней<br>
+    до отправления
+  </p>
+</div>
+
+  </div>
+
+</section>
+
+<footer class="station-footer">
+  <div class="footer-container">
+
+    <div class="footer-block">
+      <h3>Контактная информация</h3>
+      <p>Справочная служба: 8-017-225-40-00</p>
+      <p>Администрация: +375 (17) 227-36-95</p>
+      <p>Email: info@railway.by</p>
+    </div>
+
+    <div class="footer-block">
+      <h3>Услуги вокзала</h3>
+      <p>Кассы: с 06:00 до 23:00</p>
+      <p>Залы ожидания: круглосуточно</p>
+      <p>Камеры хранения: с 07:00 до 22:00</p>
+      <p>Медпункт: круглосуточно</p>
+    </div>
+
+    <div class="footer-block">
+      <h3>Адрес вокзала</h3>
+      <p>г. Минск, пл. Привокзальная, 3</p>
+      <p>Метро: Площадь Ленина</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Железнодорожный вокзал. Все права защищены.
+  </div>
+</footer>
+
+<script src="ticket.js"></script>
+<script src="search.js"></script>
+
+</body>
+</html>

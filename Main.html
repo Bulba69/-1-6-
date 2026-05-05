@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вокзал</title>
+  <link rel="stylesheet" href="style/_layout.scss">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/little.css">
+</head>
+<body>
+ 
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon">
+      <img src="logo.svg" alt="logo">
+    </div>
+    <div>
+      <div class="title">Минск-Пассажирский</div>
+      <div class="subtitle">Центральный вокзал</div>
+    </div>
+  </div>
+ 
+  <div class="search">
+    <input type="text" placeholder="Поиск: город или номер поезда...">
+    <button>Найти</button>
+  </div>
+ 
+  <nav class="nav">
+    <a href="Main.html" class="active">Главная</a>
+    <a href="schedule.html">Расписание</a>
+    <a href="about.html">О нас</a>
+  </nav>
+</header>
+     <section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Добро пожаловать на вокзал</h1>
+    <p>Актуальная информация о рейсах и услугах</p>
+    <a href="schedule.html" class="btn">Найти билеты</a>
+  </div>
+      </section>
+       <main class="container">
+ 
+  <h2>Ближайшие рейсы</h2>
+ 
+  <div class="grid">
+ 
+    <a href="ticket.html?train=601%D0%91" class="train-card">
+      <div class="card-header">
+        <h3>Поезд №601Б</h3>
+        <span class="status ok">✔ Вовремя</span>
+      </div>
+      <div class="type purple">Межрегиональный</div>
+      <div class="route">
+        <div>
+          <p>Минск</p>
+          <span class="time">08:00</span>
+        </div>
+        <div class="line">— ⏱ —</div>
+        <div>
+          <p>Брест</p>
+          <span class="time">11:45</span>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Платформа: 3</span>
+        <span>3ч 45мин</span>
+      </div>
+    </a>
+ 
+    <a href="ticket.html?train=803%D0%93" class="train-card">
+      <div class="card-header">
+        <h3>Поезд №803Г</h3>
+        <span class="status delay">⚠ +25 мин</span>
+      </div>
+      <div class="type green">Эконом</div>
+      <div class="route">
+        <div>
+          <p>Минск</p>
+          <span class="time">10:30</span>
+        </div>
+        <div class="line">— ⏱ —</div>
+        <div>
+          <p>Витебск</p>
+          <span class="time">13:45</span>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Платформа: 7</span>
+        <span>3ч 15мин</span>
+      </div>
+    </a>
+ 
+    <a href="ticket.html?train=904%D0%92" class="train-card">
+      <div class="card-header">
+        <h3>Поезд №904В</h3>
+        <span class="status ok">✔ Вовремя</span>
+      </div>
+      <div class="type purple">Межрегиональный</div>
+      <div class="route">
+        <div>
+          <p>Минск</p>
+          <span class="time">12:00</span>
+        </div>
+        <div class="line">— ⏱ —</div>
+        <div>
+          <p>Гродно</p>
+          <span class="time">15:20</span>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Платформа: 2</span>
+        <span>3ч 20мин</span>
+      </div>
+    </a>
+ 
+  </div>
+ 
+  <div class="all-trains">
+    <a href="schedule.html" class="all-btn">
+      Посмотреть все рейсы →
+    </a>
+  </div>
+ 
+  <section class="station-services">
+    <h2 class="station-title">Услуги вокзала</h2>
+ 
+    <div class="station-cards">
+ 
+      <div class="station-card">
+        <div class="station-icon">
+          <img src="icons/clock.png" alt="">
+        </div>
+        <h3>Кассы</h3>
+        <p>Работаем с 06:00 до 23:00</p>
+      </div>
+ 
+      <div class="station-card">
+        <div class="station-icon">
+          <img src="icons/home.png" alt="">
+        </div>
+        <h3>Залы ожидания</h3>
+        <p>Круглосуточно</p>
+      </div>
+ 
+      <div class="station-card">
+        <div class="station-icon">
+          <img src="icons/box.png" alt="">
+        </div>
+        <h3>Камеры хранения</h3>
+        <p>Работаем с 07:00 до 22:00</p>
+      </div>
+ 
+    </div>
+  </section>
+        </main>
+       <footer class="station-footer">
+  <div class="footer-container">
+ 
+    <div class="footer-block">
+      <h3>Контактная информация</h3>
+      <p>Справочная служба: 8-017-225-40-00</p>
+      <p>Администрация: +375 (17) 227-36-95</p>
+      <p>Email: info@railway.by</p>
+    </div>
+ 
+    <div class="footer-block">
+      <h3>Услуги вокзала</h3>
+      <p>Кассы: с 06:00 до 23:00</p>
+      <p>Залы ожидания: круглосуточно</p>
+      <p>Камеры хранения: с 07:00 до 22:00</p>
+      <p>Медпункт: круглосуточно</p>
+    </div>
+ 
+    <div class="footer-block">
+      <h3>Адрес вокзала</h3>
+      <p>г. Минск, пл. Привокзальная, 3</p>
+      <p>Метро: Площадь Ленина</p>
+    </div>
+ 
+  </div>
+ 
+  <div class="footer-bottom">
+    © 2026 Железнодорожный вокзал. Все права защищены.
+  </div>
+       </footer>
+<script src="search.js"></script>
+ 
+</body>
+</html>

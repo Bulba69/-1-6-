@@ -1,0 +1,303 @@
+@media (min-width: 1400px) {
+  .trains-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f1f5f9;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  padding: 100px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 300px;
+  background: url("Vokzal.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+}
+
+
+.filters {
+  max-width: 1100px;
+  margin: 20px auto 40px;
+  background: #f9fafb;
+  border-radius: 20px;
+  padding: 30px;
+
+  
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.06),
+    0 8px 16px rgba(0, 0, 0, 0.04),
+    0 2px 4px rgba(0, 0, 0, 0.03);
+
+  position: relative;
+  z-index: 2;
+}
+.filters h2 {
+  margin-bottom: 10px;
+}
+
+.filters small {
+  color: #6b7280;
+}
+
+.filters input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  margin: 15px 0;
+}
+
+.filter-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  flex: 1;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-filter {
+  padding: 14px 20px;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  background: white;
+  cursor: pointer;
+}
+.filter-btn,
+.time-btn {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+.filter-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+
+.filter-btn.purple.active {
+  background: #a855f7;
+  color: white;
+}
+
+.filter-btn.green.active {
+  background: #22c55e;
+  color: white;
+}
+
+.filter-btn.orange.active {
+  background: #f59e0b;
+  color: white;
+}
+
+.time-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+
+
+
+
+.trains {
+  padding: 40px;
+}
+
+.trains-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+
+.trains-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+.train-card {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 20px;
+display: block;
+  text-decoration: none;
+  color: black;
+background: #f3f4f6;
+  padding: 20px;
+  border-radius: 12px;
+
+  border: 2px solid transparent;
+  transition: 0.3s;
+  
+}
+
+.train-card:hover {
+ border: 2px solid #2563eb;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+  transform: translateY(-3px);
+}
+
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-top h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.status.ok {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.status.delay {
+  color: #ea580c;
+  font-weight: 600;
+}
+
+
+.badge {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.badge.purple {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.badge.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.badge.orange {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+
+.route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.point {
+  text-align: left;
+}
+
+.point.right {
+  text-align: right;
+}
+
+.label {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.point p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.time {
+  color: #2563eb;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+
+.route-line {
+  color: #94a3b8;
+}
+
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #475569;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 10px;
+}
+.rules {
+  padding: 60px 40px;
+  background: #f8fafc;
+}
+
+.rules h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.rule-block {
+  margin-bottom: 30px;
+}
+
+.rule-block h3 {
+  color: #2563eb;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.rule-block ul {
+  padding-left: 20px;
+}
+
+.rule-block li {
+  margin-bottom: 10px;
+  color: #334155;
+  font-size: 16px;
+}

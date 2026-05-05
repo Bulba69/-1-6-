@@ -1,0 +1,67 @@
+@media (max-width: 768px) {
+
+  
+ 
+  .hero {
+    height: 200px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+ 
+  .filters {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .filter-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .train-types,
+  .time-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-btn,
+  .time-btn {
+    flex: 1 1 45%;
+  }
+
+ 
+  .trains {
+    padding: 20px;
+  }
+
+  .trains-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .train-card {
+    padding: 15px;
+  }
+
+  .route {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .route-line {
+    display: none;
+  }
+
+  .point,
+  .point.right {
+    text-align: center;
+  }
+
+}
